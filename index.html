@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/d310d4da21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="content_container">
+        <div id="finish_tast_header">
+            <p>Task.</p>
+        </div>
+
+        <div id="task_input_container">
+            <input type="text" id="input_box" placeholder="Start a Task"/>
+            <input type="date" id="input_date"/>
+            <button id="input_button" onclick="add_task();">Enter Task<i class="fa fa-arrow-circle-right"></i></button>
+        </div>
+
+        <!-- tasks to do-->
+
+        <p class="header">Task</p>
+        <div class="task-container">
+
+            <div class="task_data">
+                <p id="task_title" contenteditable="false">Task Title 1</p>
+                <p id="task_date" contenteditable="false">Task Date 1</p>
+            </div>
+            <div id="task_tool">
+                <button id="task_done_button" onclick="task_done();"><i class="fa fa-check"></i></button>
+                <button id="task_edit_button" onclick="task_edit();"><i class="fa fa-pencil"></i></button>
+                <button id="task_delete_button" onclick="task_delete();"><i class="fa fa-trash"></i></button>
+            </div>
+        </div>
+
+
+        <!-- tasks done-->
+
+        <p class="header">Finished</p>
+        <div class="task-container">
+
+            <div class="task_data">
+                <p id="task_title" contenteditable="false">Task Title 1</p>
+                <p id="task_date" contenteditable="false">Task Date 1</p>
+            </div>
+        </div>
+    </div>
+    
+<script>
+
+</script>
+</body>
+</html>

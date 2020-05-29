@@ -4,11 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/d310d4da21.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="content_container">
-        <div id="finish_tast_header">
+        <div id="finish_task_header">
             <p>Task.</p>
         </div>
 
@@ -48,7 +51,17 @@
     </div>
     
 <script>
-
+    var firebaseConfig = {
+        apiKey: "AIzaSyB4X6PJnCSfVdqX55VSHFjj-BdsF5Dp7tk",
+        authDomain: "todolist-8ef9f.firebaseapp.com",
+        databaseURL: "https://todolist-8ef9f.firebaseio.com",
+        projectId: "todolist-8ef9f",
+        storageBucket: "todolist-8ef9f.appspot.com",
+        messagingSenderId: "104560995309",
+        appId: "1:104560995309:web:5ca90d64988663fb2195e4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 </script>
 </body>
 </html>

@@ -159,3 +159,130 @@ body{
     padding-right: 20px;
     box-shadow: opx 5px #4d4646;
 }
+
+.container{
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    background-color: #f5eaea;
+    width: 90%;
+    height: 390px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.task_container{
+    background-color: #fff;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.task_container:hover{
+    border: 2px solid #75b79e;
+    box-sizing: border-box; 
+}
+
+#task_data{
+    display: inline-block;
+    /* float: left;     */
+    width: 200px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+#task_tool{
+    /* display: inline-block; */
+    /* padding-right: 10px; */
+    float: right;
+    height: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task_done_button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#task_done_button:hover{
+    background-color: #75b79e;
+    color: white;
+}
+
+#task_done_button:active{
+    transform: translateY(4px);
+}
+
+#task_edit_button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#task_edit_button{
+    background-color: #4d4646;
+    color: white;
+}
+
+#task_edit_button:active{
+    transform: translateY(4px);
+}
+
+#task_delete_button{
+    float:right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border:none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+
+}
+
+#task_delete_button:hover{
+    background-color: #fa163f;
+    color: white;
+}
+
+#task_delete_button:active{
+    transform: translateY(4px);
+}
+
+#task_title{
+    background-color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    float: left;
+    width: 100%;
+}
+
+
+#task_date{
+    background-color: #fff;
+    font-family: monospace;
+    color: grey;
+    font-size: 12px;
+    float: left;
+    margin: 0;
+    margin-bottom: 5px;
+}

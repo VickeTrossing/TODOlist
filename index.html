@@ -12,7 +12,7 @@
 <body>
     <div id="content_container">
         <div id="finish_task_header">
-            <p>Task.</p>
+            <p>Finish ask.</p>
         </div>
 
         <div id="task_input_container">
@@ -24,16 +24,18 @@
         <!-- tasks to do-->
 
         <p class="header">Task</p>
-        <div class="task-container">
+        <div class="container">
+            <div class="task_container">
 
-            <div class="task_data">
-                <p id="task_title" contenteditable="false">Task Title 1</p>
-                <p id="task_date" contenteditable="false">Task Date 1</p>
-            </div>
-            <div id="task_tool">
-                <button id="task_done_button" onclick="task_done();"><i class="fa fa-check"></i></button>
-                <button id="task_edit_button" onclick="task_edit();"><i class="fa fa-pencil"></i></button>
-                <button id="task_delete_button" onclick="task_delete();"><i class="fa fa-trash"></i></button>
+                <div class="task_data">
+                    <p id="task_title" contenteditable="false">Task Title 1</p>
+                    <p id="task_date" contenteditable="false">Task Date 1</p>
+                </div>
+                <div id="task_tool">
+                    <button id="task_done_button" onclick="task_done();"><i class="fa fa-check"></i></button>
+                    <button id="task_edit_button" onclick="task_edit();"><i class="fa fa-pencil"></i></button>
+                    <button id="task_delete_button" onclick="task_delete();"><i class="fa fa-trash"></i></button>
+                </div>
             </div>
         </div>
 
@@ -41,27 +43,15 @@
         <!-- tasks done-->
 
         <p class="header">Finished</p>
-        <div class="task-container">
+        <div class="container">
+            <div class="task_container">
 
-            <div class="task_data">
-                <p id="task_title" contenteditable="false">Task Title 1</p>
-                <p id="task_date" contenteditable="false">Task Date 1</p>
+                <div class="task_data">
+                    <p id="task_title" contenteditable="false">Task Title 1</p>
+                    <p id="task_date" contenteditable="false">Task Date 1</p>
+                </div>
             </div>
-        </div>
+      </div>
     </div>
-    
-<script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyB4X6PJnCSfVdqX55VSHFjj-BdsF5Dp7tk",
-        authDomain: "todolist-8ef9f.firebaseapp.com",
-        databaseURL: "https://todolist-8ef9f.firebaseio.com",
-        projectId: "todolist-8ef9f",
-        storageBucket: "todolist-8ef9f.appspot.com",
-        messagingSenderId: "104560995309",
-        appId: "1:104560995309:web:5ca90d64988663fb2195e4"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
 </body>
 </html>

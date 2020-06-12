@@ -1,5 +1,5 @@
 body{
-    background-color: #75b79e;
+    background-color: #2e2e2e;
 }
 
 #content_container{
@@ -11,7 +11,8 @@ body{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 5%);
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(188, 73, 255);
 }
 
 #finish_task_header{
@@ -42,7 +43,7 @@ body{
     height: 50px;
     background-color: none;
     border: none;
-    border-bottom: 2px solid #7fcd91;
+    border-bottom: 2px solid rgb(188, 73, 255);
     text-align: center;
     font-family: monospace;
     font-weight: bold;
@@ -52,7 +53,7 @@ body{
 }
 
 #input_box:focus{
-    border-bottom: 4px solid #2c786c;
+    border-bottom: 4px solid rgb(188, 73, 255);
     outline: none;
 }
 
@@ -63,7 +64,7 @@ body{
     height: 50px;
     background-color: none;
     border: none;
-    border-bottom: 2px solid #7fcd91;
+    border-bottom: 2px solid rgb(188, 73, 255);
     text-align: center;
     font-family: monospace;
     font-weight: bold;
@@ -73,7 +74,7 @@ body{
 }
 
 #input_date:focus{
-    border-bottom: 4px solid #2c786c;
+    border-bottom: 4px solid rgb(188, 73, 255);
     outline: none;
 }
 
@@ -122,21 +123,21 @@ body{
     float: left;
     margin-left: 20%;
     margin-top: 20px;
-    background-color: #fff;
+    background-color: rgb(145, 145, 145);
     height: 40px;
-    color: #2c786c;
+    color: rgb(144, 55, 196);
     cursor: pointer;
     outline: none;
     text-align: center;
     font-family: monospace;
     font-size: 17px;
     text-align: center;
-    border: 2px solid #75b79e;
+    border: 2px solid rgb(188, 73, 255);
     border-radius: 5px;
 }
 
 #input_button:hover{
-    background-color: #75b79e;
+    background-color: rgb(188, 73, 255);
     color: white;
 }
 
@@ -147,7 +148,7 @@ body{
 .header{
     float: left;
     margin-left: 5%;
-    background-color: #75b79e;
+    background-color: rgb(188, 73, 255);
     color: white;
     text-align: center;
     font-family: monospace;
@@ -164,7 +165,7 @@ body{
     float: left;
     margin-left: 5%;
     margin-bottom: 40px;
-    background-color: #f5eaea;
+    background-color: #969696;
     width: 90%;
     height: 390px;
     overflow-y: scroll;
@@ -181,26 +182,27 @@ body{
 }
 
 .task_container:hover{
-    border: 2px solid #75b79e;
+    border: 2px solid rgb(188, 73, 255);
     box-sizing: border-box; 
 }
 
 #task_data{
     display: inline-block;
-    /* float: left;     */
-    width: 200px;
+    float: left;
+    width: 50%;
     height: 100%;
     margin-left: 10px;
+
 }
 
 #task_tool{
-    /* display: inline-block; */
-    /* padding-right: 10px; */
+    display: inline-block;
     float: right;
-    height: 0%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #task_done_button{
@@ -215,8 +217,21 @@ body{
     margin-right: 5px;
 }
 
+#task_edit_button_editing{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #ffed83;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
 #task_done_button:hover{
-    background-color: #75b79e;
+    background-color: rgb(188, 73, 255);
     color: white;
 }
 

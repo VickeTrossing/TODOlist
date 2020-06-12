@@ -9,10 +9,10 @@
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/d310d4da21.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="create_unfinished_task(), create_finished_task()">
     <div id="content_container">
         <div id="finish_task_header">
-            <p>Finish ask.</p>
+            <p>TODO app</p>
         </div>
 
         <div id="task_input_container">
@@ -25,18 +25,6 @@
 
         <p class="header">Task</p>
         <div class="container">
-            <div class="task_container">
-
-                <div class="task_data">
-                    <p id="task_title" contenteditable="false">Task Title 1</p>
-                    <p id="task_date" contenteditable="false">Task Date 1</p>
-                </div>
-                <div id="task_tool">
-                    <button id="task_done_button" onclick="task_done();"><i class="fa fa-check"></i></button>
-                    <button id="task_edit_button" onclick="task_edit();"><i class="fa fa-pencil"></i></button>
-                    <button id="task_delete_button" onclick="task_delete();"><i class="fa fa-trash"></i></button>
-                </div>
-            </div>
         </div>
 
 
@@ -44,13 +32,6 @@
 
         <p class="header">Finished</p>
         <div class="container">
-            <div class="task_container">
-
-                <div class="task_data">
-                    <p id="task_title" contenteditable="false">Task Title 1</p>
-                    <p id="task_date" contenteditable="false">Task Date 1</p>
-                </div>
-            </div>
       </div>
     </div>
 </body>

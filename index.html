@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/d310d4da21.js" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +17,7 @@
         </div>
 
         <div id="task_input_container">
-            <input type="text" id="input_box" placeholder="Start a Task"/>
+            <input type="text" id="input_box" placeholder="Write down a TODO"/>
             <input type="date" id="input_date"/>
             <button id="input_button" onclick="add_task();">Enter Task<i class="fa fa-arrow-circle-right"></i></button>
         </div>
@@ -33,6 +34,7 @@
         <p class="header">Finished</p>
         <div class="container">
       </div>
+      <button id="input_button" onclick="signOut();">Sign Out<i class="fa fa-arrow-circle-right"></i></button>
     </div>
 </body>
 </html>

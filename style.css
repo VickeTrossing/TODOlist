@@ -11,8 +11,9 @@ body{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 5%);
-    border-radius: 5px;
-    border: 2px solid rgb(188, 73, 255);
+    border-radius: 2px;
+    /* border: 2px solid rgb(188, 73, 255); */
+    box-shadow: 0px 0px 15px rgb(188, 73, 255);
 }
 
 #finish_task_header{
@@ -125,7 +126,7 @@ body{
     margin-top: 20px;
     background-color: rgb(145, 145, 145);
     height: 40px;
-    color: rgb(144, 55, 196);
+    color: white;
     cursor: pointer;
     outline: none;
     text-align: center;
@@ -300,4 +301,64 @@ body{
     float: left;
     margin: 0;
     margin-bottom: 5px;
+}
+
+
+#formContainer{
+    background-color: #5b5656;
+    width: 30%;
+    margin: auto;
+    display: inline-block;
+    padding-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    border-radius: 2px;
+    box-shadow: 1px 1px 10px rgb(188, 73, 255);
+}
+
+#formContainer, h1{
+
+    color: whitesmoke;
+    text-align: center;
+}
+
+#email{
+    text-align: center;
+    width: 70%;
+    height: 40px;
+    display: block;
+    margin: 25 auto;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(188, 73, 255);
+}
+
+#password{
+    text-align: center;
+    width: 70%;
+    height: 40px;
+    display: block;
+    margin: 30 auto;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(188, 73, 255);
+}
+
+#signUp, #signIn, #signOut{
+    background-color:  rgb(188, 73, 255);
+    border: none;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#signUp:hover, #signIn:hover{
+    background-color:  rgb(171, 27, 255);
+}
+
+#signUp:active, #signIn:active{
+    background-color:  rgb(140, 23, 207);
 }

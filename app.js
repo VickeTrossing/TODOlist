@@ -15,6 +15,10 @@
         input_box = document.getElementById("input_box")
         input_date = document.getElementById("input_date");
 
+        if(input_box.value.length == 0 || input_date.value.length == 0){
+            window.alert("You need to write a TODO and choose a date");
+        }
+
         if(input_box.value.length != 0 && input_date.value.length != 0){
             let key = firebase.database().ref().child("unfinished_task").push().key;
             let task = {
@@ -238,4 +242,15 @@
         task_to_remove.remove();
 
         task.remove();
+    }
+
+
+    const signOut = () => {
+
+        firebase.auth().signOut().then(function() {
+            console.log('Signed Out');
+            window.location = "login/login.html"
+          }, function(error) {
+            console.error('Sign Out Error', error);
+          });
     }

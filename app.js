@@ -7,8 +7,8 @@
         messagingSenderId: "104560995309",
         appId: "1:104560995309:web:5ca90d64988663fb2195e4"
     };
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+
 
 
     function add_task(){

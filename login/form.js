@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyB4X6PJnCSfVdqX55VSHFjj-BdsF5Dp7tk",
     authDomain: "todolist-8ef9f.firebaseapp.com",
@@ -9,23 +10,25 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 const auth = firebase.auth();
 
-firebase.auth().onAuthStateChanged(function(user){
-    if(user){
-        window.alert("Välkommen");
-        console.log(user);
-        window.location = "../index.html";
 
-    }else{
-        window.alert("Logga in då");
-    }
+
+auth.onAuthStateChanged(user => {
+   if(user){
+       console.log("User logged in ", user);
+   }else{
+       console.log("ueser logged out");
+   }
 });
 
 const signIn = () => {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value; 
+
+   
+        console.log("Welcome " + email + password);
+    window.location = "../index.html";
 
     auth.signInWithEmailAndPassword(email, password).catch(function(error){
         let errorCode = error.code;
@@ -48,58 +51,13 @@ const signUp = () => {
 }
 
 
+const signOut = () => {
 
+    firebase.auth().signOut().then(function() {
+        console.log('Signed Out');
+        // window.location = "login/login.html"
+      }, function(error) {
+        console.error('Sign Out Error', error);
+      });
+}
 
-// const auth = firebase.auth();
-
-
-// const signUp = () => {
-//     let email = document.getElementById("email");
-//     let password = document.getElementById("password");
-
-
-// auth.createUserWithEmailAndPassword(email, password).catch(function(error){
-//     let errorCode = error.code;
-//     let errorMessage = error.message;
-// });
-
-//     // const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-//     // promise.catch(e => alert(e.message));
-
-//     // window.alert("Signed Up!");
-// }
-
-// const signIn = () => {
-
-//     let email = document.getElementById("email");
-//     let password = document.getElementById("password");
-
-//     auth.signInWithEmailAndPassword(email, password).catch(function(error){
-//         let errorCode = error.code;
-//         let errorMessage = error.message;
-//     });
-
-//     // const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-//     // promise.catch(e => alert(e.message));
-
-//     // window.alert("Signed In! Welcome " + email);
-
-
-
-// }
-
-// const signOut = () => {
-//     auth.signOut();
-//     window.alert("Catch ya later!");
-// }
-
-// auth.onAuthStateChanged(function(user){
-//     if(user){
-
-//         let email = user.email;
-//         window.alert("Active user " + email);
-
-//     }else{
-//         window.alert("No active user");
-//     }
-// });

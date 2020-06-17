@@ -14,13 +14,14 @@ const auth = firebase.auth();
 
 
 
-auth.onAuthStateChanged(user => {
-   if(user){
-       console.log("User logged in ", user);
-   }else{
-       console.log("ueser logged out");
-   }
-});
+// auth.onAuthStateChanged(user => {
+//    if(user){
+//        console.log("User logged in ", user);
+//    }else{
+//        console.log("user logged out");
+//    }
+// });
+
 
 const signIn = () => {
     let email = document.getElementById("email").value;
@@ -28,7 +29,7 @@ const signIn = () => {
 
    
         console.log("Welcome " + email + password);
-    window.location = "../index.html";
+        window.location = "../index.html";
 
     auth.signInWithEmailAndPassword(email, password).catch(function(error){
         let errorCode = error.code;

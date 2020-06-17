@@ -10,6 +10,15 @@
     firebase.initializeApp(firebaseConfig);
 
 
+    firebase.auth().onAuthStateChanged(user => {
+        if(user){
+            console.log("User logged in ", user);
+        }else{
+            console.log(user, "user logged out");
+            // window.location = "login/login.html"
+        }
+     });
+
 
     function add_task(){
         input_box = document.getElementById("input_box")

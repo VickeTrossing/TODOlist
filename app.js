@@ -10,14 +10,17 @@
     firebase.initializeApp(firebaseConfig);
 
 
-    firebase.auth().onAuthStateChanged(user => {
-        if(user){
-            console.log("User logged in ", user);
-        }else{
-            console.log(user, "user logged out");
-            // window.location = "login/login.html"
-        }
-     });
+
+    //Problem uppstår med den här koden, man blir utloggad direkt när man kommer från login sid
+
+    // firebase.auth().onAuthStateChanged(user => {
+    //     if(user){
+    //         console.log("User logged in ", user);
+    //     }else{
+    //         console.log(user, "user logged out");
+    //         // window.location = "login/login.html"
+    //     }
+    //  });
 
 
     function add_task(){

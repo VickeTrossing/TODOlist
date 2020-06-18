@@ -13,7 +13,6 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 
-
 // auth.onAuthStateChanged(user => {
 //    if(user){
 //        console.log("User logged in ", user);
@@ -56,7 +55,7 @@ const signOut = () => {
 
     firebase.auth().signOut().then(function() {
         console.log('Signed Out');
-        // window.location = "login/login.html"
+        window.location = "login/login.html"
       }, function(error) {
         console.error('Sign Out Error', error);
       });

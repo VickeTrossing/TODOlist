@@ -11,32 +11,33 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+let user = firebase.auth().currentUser;
 
 
-// auth.onAuthStateChanged(user => {
-//    if(user){
-//        console.log("User logged in ", user);
-//    }else{
-//        console.log("user logged out");
-//    }
-// });
+
+auth.onAuthStateChanged(user => {
+   if(user){
+       console.log("User logged in ", user);
+       window.location = "../index.html"
+   }else{
+       console.log("user logged out");
+   }
+});
 
 
 const signIn = () => {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value; 
-
-   
-        console.log("Welcome " + email + password);
-        window.location = "../index.html";
-
+    
     auth.signInWithEmailAndPassword(email, password).catch(function(error){
         let errorCode = error.code;
         let errorMessage = error.message;
 
         window.alert("Error: " + errorMessage);
     })
-}
+   }
+
+//}
 
 const signUp = () => {
 
@@ -55,9 +56,41 @@ const signOut = () => {
 
     firebase.auth().signOut().then(function() {
         console.log('Signed Out');
-        window.location = "login/login.html"
+        // window.location = "login/login.html"
       }, function(error) {
         console.error('Sign Out Error', error);
       });
 }
 
+
+
+
+//Lek med tetta!
+
+// const myUser = {
+//     getId: () => sessionStorage.getItem("uid"),
+//     setId: (uid)=> sessionStorage.setItem("uid", uid),
+//     unset: () => sessionStorage.removeItem("uid")
+// };
+ 
+// firebase.auth().onAuthStateChanged((user) =>  {
+//     if (user) {
+//         let {uid} = user;
+//         myUser.setId(uid);
+//     } else {
+//         myUser.unset();
+//     }
+// });
+ 
+// saveItem = () => {
+//     db.save({
+//         text: "sdfsfsdf",
+//         uid: myUser.getId()
+//     });
+// }
+ 
+// getAll = () => {
+//     db.getAll("/items", {
+//         uid: myUser.getId()
+//     })
+// }
